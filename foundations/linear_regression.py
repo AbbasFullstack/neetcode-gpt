@@ -1,0 +1,1 @@
+import numpy as np; exec("class Solution:\n    def get_model_prediction(self, X, weights):\n        return np.round(np.matmul(X, weights), 5)\n    def get_error(self, model_prediction, ground_truth):\n        return round(np.mean((model_prediction - ground_truth) ** 2), 5)")
