@@ -1,0 +1,1 @@
+import numpy as np; exec("class Solution:\n    def forward(self, x, weights, biases):\n        h = np.array(x)\n        for i in range(len(weights)):\n            h = np.dot(h, np.array(weights[i])) + np.array(biases[i])\n            if i < len(weights) - 1:\n                h = np.maximum(0, h)\n        return np.round(h, 5)")
