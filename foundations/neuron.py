@@ -1,0 +1,1 @@
+import numpy as np; exec("class Solution:\n    def forward(self, x, w, b, activation):\n        s = np.dot(x, w) + b\n        if activation == 'sigmoid':\n            return round(1 / (1 + np.exp(-s)), 5)\n        else:\n            return round(max(0.0, float(s)), 5)")
