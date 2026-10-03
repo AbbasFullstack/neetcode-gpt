@@ -1,0 +1,1 @@
+import numpy as np; exec("class Solution:\n    def backward(self, x, w, b, y_true):\n        z = np.dot(x, w) + b\n        y_hat = 1 / (1 + np.exp(-z))\n        delta = (y_hat - y_true) * y_hat * (1 - y_hat)\n        dL_dw = delta * x\n        dL_db = delta\n        return (np.round(dL_dw, 5), round(float(dL_db), 5))")
