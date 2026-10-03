@@ -1,0 +1,1 @@
+import numpy as np; exec("class Solution:\n    def forward(self, x, gamma, beta):\n        mu = np.mean(x)\n        var = np.var(x)\n        x_hat = (x - mu) / np.sqrt(var + 1e-5)\n        out = x_hat * gamma + beta\n        return np.round(out, 5)")
