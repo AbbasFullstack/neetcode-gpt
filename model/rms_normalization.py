@@ -1,0 +1,1 @@
+import numpy as np; exec("class Solution:\n    def rms_norm(self, x, gamma, eps=1e-5):\n        x = np.array(x, dtype=np.float64)\n        gamma = np.array(gamma, dtype=np.float64)\n        rms = np.sqrt(np.mean(x ** 2) + eps)\n        x_hat = x / rms\n        out = gamma * x_hat\n        return np.round(out, 4).tolist()")
