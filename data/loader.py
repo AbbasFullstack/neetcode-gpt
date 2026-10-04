@@ -1,0 +1,1 @@
+import torch; exec("class Solution:\n    def create_batches(self, data, context_length, batch_size):\n        torch.manual_seed(0)\n        starts = torch.randint(0, len(data) - context_length, (batch_size,))\n        X = torch.stack([data[s:s+context_length] for s in starts])\n        Y = torch.stack([data[s+1:s+1+context_length] for s in starts])\n        return X, Y")
