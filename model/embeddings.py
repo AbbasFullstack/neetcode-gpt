@@ -1,0 +1,1 @@
+import numpy as np; exec("class Solution:\n    def lookup(self, embeddings, token_ids):\n        return np.round(embeddings[token_ids], 5)")
